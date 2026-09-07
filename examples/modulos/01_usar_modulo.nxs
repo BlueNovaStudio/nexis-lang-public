@@ -1,0 +1,7 @@
+#/ Importar un módulo propio con #inject
+#/ Asegúrate de que "geometria.nex" esté en la misma carpeta.
+#inject "geometria.nex";
+
+Console.print(areaCirculo(5.0))               // ≈ 78.54
+Console.print(areaCuadrado(4.0))              // 16
+Console.print(areaTriangulo(3.0, 2.0))        // 3

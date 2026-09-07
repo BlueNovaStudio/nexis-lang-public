@@ -1,0 +1,43 @@
+#/ Vector: operaciones básicas
+#inject vector;
+
+Vector<int> datos = [5, 1, 4, 2, 3]
+datos.ordenar()
+bool existe = datos.contiene(3)
+Console.print("Contiene 3? " + existe)
+Console.print("Longitud: " + datos.longitud())
+
+foreach (v in datos) {
+    Console.println(v)
+}
+
+#/ Map: frecuencia de palabras
+#inject map;
+#inject string;
+
+string frase = "el gato y el perro y el gato"
+Vector<string> palabras = string.dividir(frase, " ")
+
+Map<string, int> frecuencia = {}
+foreach (palabra in palabras) {
+    if (frecuencia.contiene(palabra)) {
+        frecuencia.poner(palabra, frecuencia.obtener(palabra) + 1)
+    } else {
+        frecuencia.poner(palabra, 1)
+    }
+}
+
+Console.print("Frecuencia de 'el': " + frecuencia.obtener("el"))       // 3
+Console.print("Frecuencia de 'gato': " + frecuencia.obtener("gato"))   // 2
+
+#/ Set: operaciones de conjunto
+#inject set;
+
+Set<int> a = {1, 2, 3, 4}
+Set<int> b = {3, 4, 5, 6}
+
+Set<int> union_ab = {}
+foreach (v in a) { union_ab.agregar(v) }
+foreach (v in b) { union_ab.agregar(v) }
+
+Console.print("Unión: " + union_ab.longitud())   // 6

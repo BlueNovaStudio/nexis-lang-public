@@ -1,0 +1,44 @@
+#inject math;
+
+#/ Función con retorno y parámetros tipados
+func esPrimo(int: n) -> bool {
+    if (n < 2) {
+        emit -> false
+    }
+    for d in 2 .. int(math.sqrt(n)) {
+        if (n % d == 0) {
+            emit -> false
+        }
+    }
+    emit -> true
+}
+
+func factorial(int: n) -> int {
+    if (n <= 1) {
+        emit -> 1
+    } else {
+        emit -> n * factorial(n - 1)
+    }
+}
+
+#/ Composición de funciones: un primo p es de Sophie Germain si 2p + 1 es primo
+func esSophieGermain(int: p) -> bool {
+    if (!esPrimo(p)) {
+        emit -> false
+    }
+    emit -> esPrimo(2 * p + 1)
+}
+
+#/ Función sin retorno (void)
+void imprimirFactorial(int: n) {
+    Console.print("El factorial de " + n + " es " + factorial(n))
+}
+
+imprimirFactorial(6)
+Console.print("3 es Sophie Germain? " + esSophieGermain(3))   // true (2*3+1=7)
+
+for n in 2 .. 20 {
+    if (esPrimo(n)) {
+        Console.println("Primo: " + n)
+    }
+}

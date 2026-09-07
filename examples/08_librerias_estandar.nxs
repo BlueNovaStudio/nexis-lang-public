@@ -1,0 +1,32 @@
+#/ Librería math
+#inject math;
+
+float base = Console.input(text="Base: ")
+float expo = Console.input(text="Exponente: ")
+
+Console.print("Potencia: " + math.pow(base, expo))
+Console.print("Raíz cuadrada: " + math.sqrt(base))
+Console.print("Logaritmo natural: " + math.log(base))
+Console.print("Valor absoluto: " + math.abs(-expo))
+
+#/ Librería string
+#inject string;
+
+string frase = "Hola Mundo"
+Console.print("Mayúsculas: " + string.mayusculas(frase))
+Console.print("Minúsculas: " + string.minusculas(frase))
+Console.print("Longitud: " + string.longitud(frase))
+
+#/ Librería random: lanzar un dado 100 veces
+#inject random;
+
+Vector<int> conteos = [0, 0, 0, 0, 0, 0]
+
+for i in 0 .. 99 {
+    int cara = random.entero(1, 6)
+    conteos[cara - 1] = conteos[cara - 1] + 1
+}
+
+for i in 0 .. 5 {
+    Console.println(fs"Cara {i + 1}: {conteos[i]}")
+}

@@ -1,0 +1,33 @@
+#/ if / else if / else
+int n = Console.input(text="Ingresa un numero: ")
+
+if (n > 0) {
+    Console.print("El numero es positivo")
+} else if (n < 0) {
+    Console.print("El numero es negativo")
+} else {
+    Console.print("El numero es 0")
+}
+
+#/ switch con casos agrupados (estación según el mes)
+int mes = Console.input(text="Mes (1-12): ")
+string estacion
+
+switch (mes) {
+    case 12: case 1: case 2:
+        estacion = "Verano"
+        break
+    case 3: case 4: case 5:
+        estacion = "Otoño"
+        break
+    case 6: case 7: case 8:
+        estacion = "Invierno"
+        break
+    case 9: case 10: case 11:
+        estacion = "Primavera"
+        break
+    default:
+        estacion = "Mes inválido"
+}
+
+Console.print(estacion)

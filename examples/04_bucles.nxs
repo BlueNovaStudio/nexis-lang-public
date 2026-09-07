@@ -1,0 +1,38 @@
+#/ Número primo con corte anticipado usando math.sqrt
+#inject math;
+
+int n = Console.input(text="Número: ")
+bool es_primo = true
+
+if (n < 2) {
+    es_primo = false
+} else {
+    for d in 2 .. int(math.sqrt(n)) {
+        if (n % d == 0) {
+            es_primo = false
+            break
+        }
+    }
+}
+
+if (es_primo) {
+    Console.print("Es primo")
+} else {
+    Console.print("No es primo")
+}
+
+#/ Factorial con bucle y con recursión
+int fact = 1
+for i in 2 .. n {
+    fact = fact * i
+}
+Console.print("Factorial (bucle): " + fact)
+
+func factorial(int: m) -> int {
+    if (m <= 1) {
+        emit -> 1
+    } else {
+        emit -> m * factorial(m - 1)
+    }
+}
+Console.print("Factorial (recursión): " + factorial(n))

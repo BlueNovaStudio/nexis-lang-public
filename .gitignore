@@ -1,0 +1,22 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Instaladores en compilación
+build/
+dist/
+*.exe
+*.msi
+*.deb
+*.rpm
+*.dmg

@@ -1,0 +1,26 @@
+#/ Declaración de todos los tipos primitivos y constantes
+int edad = 18
+
+string nombre = "BlueNova Studio"
+
+char letra = 'A'
+
+float altura = 1.4f
+
+double sueldo = 135.2536
+
+bool esta_activo = true
+
+const double PI = 3.14159
+
+Console.print(edad)
+Console.print(nombre)
+Console.print(letra)
+Console.print(altura)
+Console.print(sueldo)
+Console.print(esta_activo)
+Console.print(PI)
+
+#/ Inferencia de tipos
+auto deducido = 42            #/ auto deduce int
+capital := "Peru"             #/ := deduce string

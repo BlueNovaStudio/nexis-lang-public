@@ -1,0 +1,5 @@
+#/ Hola mundo
+Console.print("Hola, Nexis!")
+
+#/ Salto de línea sin esperar entrada
+Console.println("Bienvenido a Nexis")

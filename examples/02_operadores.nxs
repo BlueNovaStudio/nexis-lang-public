@@ -1,0 +1,15 @@
+#/ Lectura por teclado y operadores aritméticos
+int a = Console.input(text="Ingrese un numero: ")
+int b = Console.input(text="Ingrese un numero: ")
+
+Console.print("Suma: " + (a + b))
+Console.print("Resta: " + (a - b))
+Console.print("Multiplicación: " + (a * b))
+Console.print("División: " + (a / b))
+Console.print("Módulo: " + (a % b))
+
+#/ Operadores lógicos y relacionales
+bool es_mayor = a > b
+bool ambos_positivos = (a > 0) && (b > 0)
+Console.print(fs"{a} > {b}: {es_mayor}")
+Console.print("Ambos positivos: " + ambos_positivos)

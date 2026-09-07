@@ -1,0 +1,45 @@
+#inject string;
+
+#/ Capturar división por cero
+int a = Console.input(text="Dividendo: ")
+int b = Console.input(text="Divisor: ")
+
+try {
+    int resultado = a / b
+    Console.print("Resultado: " + resultado)
+} catch (ErrorDivision e) {
+    Console.print("No se puede dividir entre cero")
+}
+
+#/ Capturar conversión inválida
+string texto = Console.input(text="Ingrese un número: ")
+
+try {
+    int valor = int(texto)
+    Console.print("El doble es: " + (valor * 2))
+} catch (ErrorValidacion e) {
+    Console.print("El texto no es un número válido")
+}
+
+#/ finally se ejecuta siempre
+try {
+    int r = 10 / 0
+} catch (ErrorDivision e) {
+    Console.print("Hubo un error")
+} finally {
+    Console.print("Esto se ejecuta SIEMPRE")
+}
+
+#/ Lanzar un error personalizado
+func validar_edad(int: edad) {
+    if (edad < 18) {
+        lanzar ErrorValidacion("Menor de edad no permitido")
+    }
+    Console.print("Edad válida")
+}
+
+try {
+    validar_edad(15)
+} catch (ErrorValidacion e) {
+    Console.print("Rechazado: " + e.mensaje())
+}

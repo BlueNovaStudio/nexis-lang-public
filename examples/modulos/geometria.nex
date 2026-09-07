@@ -1,0 +1,15 @@
+#/ geometria.nex — módulo de funciones geométricas.
+#/ Se importa desde otros ficheros con: #inject "geometria.nex";
+#inject math;
+
+func areaCirculo(float: radio) -> float {
+    emit -> math.PI * radio * radio
+}
+
+func areaCuadrado(float: lado) -> float {
+    emit -> lado * lado
+}
+
+func areaTriangulo(float: base, float: altura) -> float {
+    emit -> (base * altura) / 2
+}
