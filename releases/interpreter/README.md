@@ -2,6 +2,6 @@
 
 Componente **interpreter** del proyecto Nexis: el intérprete del lenguaje.
 
-Actualmente **no hay ninguna release publicada** para este componente.
+Versiones publicadas:
 
-Cuando se publique la primera versión, se creará `releases/interpreter/<versión>/README.md` y se añadirá una fila al [índice de releases](../README.md).
+- [v0.0.1](v0.0.1/README.md) — Release inicial: binario `nexisi` que ejecuta programas `.nxs` en modo archivo, bytecode y REPL.

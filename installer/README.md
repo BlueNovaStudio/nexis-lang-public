@@ -1,38 +1,49 @@
-# 🚀 Instalador de Nexis
+# Instalador de Nexis
 
-Este directorio albergará los **instaladores oficiales** del lenguaje Nexis para llevar el compilador y el intérprete a tu equipo con un solo clic.
+Este directorio contiene los **instaladores oficiales** del lenguaje Nexis para llevar el compilador y el intérprete a tu equipo.
 
 ## Estado actual
 
-| Componente | Estado |
-|---|---|
-| Instalador del lenguaje | 🚧 En desarrollo |
-| **Nexis V1.0.0** | ⏳ Pendiente del compilador y el intérprete |
+| Componente | Versión | Estado | Windows | Linux |
+|---|---|---|---|---|
+| Producto completo | v0.0.1 (demo) | Publicado | **[nexis-v0.0.1-windows-x86_64.exe](v0.0.1/nexis-v0.0.1-windows-x86_64.exe)** | **Debian/Ubuntu:** [nexis-v0.0.1-linux-x86_64.deb](v0.0.1/nexis-v0.0.1-linux-x86_64.deb) <br> **Otras distros:** [nexis-v0.0.1-linux-x86_64.tar.xz](v0.0.1/nexis-v0.0.1-linux-x86_64.tar.xz) |
 
-El instalador completo incluirá:
+> **macOS:** el instalador `.pkg` está pendiente (debe generarse en un equipo Mac).
 
-- El **intérprete** (`nexis` en línea de comandos).
-- El **compilador** (cuando esté publicado).
-- Integración con Visual Studio Code a través de la extensión oficial.
+## Qué incluye el instalador
 
-## Mientras tanto, qué puedes instalar hoy
+- El **compilador** `nexisc` y el **intérprete** `nexisi` (v0.0.1).
+- La **documentación** oficial y la **suite de tests** del lenguaje.
+- La **extensión de VS Code** (`.vsix`).
 
-### Extensión de VS Code (disponible)
+> La versión `v0.0.1` es una **demo**: la implementación cubre tipos, operadores, `Console` e interpolación `fs"…"`. El alcance completo (control de flujo, funciones, POO, `try/catch` y módulos) llegará con **Nexis V1.0.0**.
 
-Da resaltado de sintaxis, comentarios y consola para Nexis:
+## Extensiones de VS Code
 
-1. Descarga el paquete desde [releases/extension/v0.0.1](../../releases/extension/v0.0.1/nexis-programming-language-support-0.0.1.vsix).
+### Última versión (v0.0.2 — recomendada)
+
+Gramática realineada con la documentación, `fs"…"`, `#inject`, 20 snippets e icono propio:
+
+1. Descarga [nexis-0.0.2.vsix](../releases/extension/v0.0.2/nexis-0.0.2.vsix).
 2. En VS Code abre la paleta de comandos (`Ctrl+Shift+P`).
 3. Ejecuta *Extensions: Install from VSIX...* y selecciona el archivo.
 
-### Documentación (disponible)
+### Incluida en el instalador (v0.0.1)
 
-Toda la documentación oficial está disponible en [docs/](../docs/README.md) y los ejemplos en [examples/](../examples/README.md).
+El paquete universal del producto lleva `nexis-programming-language-support-0.0.1.vsix` (soporte base de sintaxis).
 
-## Proceso para publicar el primer instalador
+## Cómo instalar el producto
 
-Cuando exista el compilador **y** el intérprete:
+Descarga el instalador de la tabla de arriba según tu sistema:
 
-1. Empaqueta el ejecutable y sus dependencias en un instalador por plataforma (Windows, Linux y macOS).
-2. Añade el artefacto a [releases/nexis/](../releases/nexis/README.md) como `nexis-<versión>.zip`.
-3. Libera la primera versión completa **Nexis V1.0.0** y publica el enlace aquí.
+- **Windows:** ejecuta el `.exe` y sigue el asistente.
+- **Debian/Ubuntu:** `sudo dpkg -i nexis-v0.0.1-linux-x86_64.deb`.
+- **Otras distros:** descomprime el `.tar.xz` y ejecuta `install.sh`.
+
+Tras instalar, asegúrate de que los binarios `nexisc` y `nexisi` están en el `PATH`.
+
+## Publicar una nueva versión
+
+1. Genera los instaladores por plataforma (Linux y Windows; macOS cuando haya un Mac disponible).
+2. Añade los artefactos a [releases/nexis/](../releases/nexis/README.md) como `nexis-<versión>-<plataforma>.<ext>`.
+3. Actualiza la tabla de estado y el [índice de releases](../releases/README.md).

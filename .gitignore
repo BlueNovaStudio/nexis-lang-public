@@ -15,8 +15,3 @@ Thumbs.db
 # Instaladores en compilación
 build/
 dist/
-*.exe
-*.msi
-*.deb
-*.rpm
-*.dmg

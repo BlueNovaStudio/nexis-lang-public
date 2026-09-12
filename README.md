@@ -57,25 +57,34 @@ for i in 1 .. 5 {
 | Componente | Estado |
 |---|---|
 | Documentación oficial | ✅ Publicada (`v0.0.1`) |
-| Extensión de VS Code | ✅ Publicada (`v0.0.1`) |
-| Compilador | 🚧 En desarrollo |
-| Intérprete | 🚧 En desarrollo |
-| **Nexis V1.0.0** (producto completo) | ⏳ Pendiente de compilador e intérprete |
+| Extensión de VS Code | ✅ Publicada (`v0.0.2`) |
+| Compilador (`nexisc`) | ✅ Publicada (`v0.0.1`, demo) |
+| Intérprete (`nexisi`) | ✅ Publicada (`v0.0.1`, demo) |
+| Producto completo (instaladores) | ✅ Publicada (`v0.0.1`, demo) |
+| **Nexis V1.0.0** (versión final) | ⏳ En desarrollo |
 
-> La primera versión general del lenguaje (**Nexis V1.0.0**) se publicará cuando existan el compilador y el intérprete. Consulta el [índice de releases](releases/README.md) para ver las versiones publicadas.
+> Las versiones publicadas actualmente son una **demo**: la implementación (`nexisc`/`nexisi` v0.0.1) cubre tipos, operadores, `Console` e interpolación `fs"…"`. El control de flujo, las funciones, la POO, `try/catch` y los módulos reales llegarán con **Nexis V1.0.0**. Consulta el [índice de releases](releases/README.md).
 
 ## Comenzar
 
-### 1. Prueba el lenguaje en tu editor
+### 1. Instala el lenguaje
 
-Instala la **extensión de Visual Studio Code** con soporte de sintaxis:
+Descarga el instalador de la **versión completa demo (v0.0.1)** para tu sistema desde [installer/](installer/README.md):
 
-- **VS Code:** abre la paleta de comandos (`Ctrl+Shift+P`) → *Extensions: Install from VSIX...* y selecciona el archivo `nexis-programming-language-support-0.0.1.vsix`.
-- O descárgala desde [releases/extension/v0.0.1](releases/extension/v0.0.1/README.md).
+- **Windows:** `nexis-v0.0.1-windows-x86_64.exe`
+- **Debian/Ubuntu:** `nexis-v0.0.1-linux-x86_64.deb`
+- **Otras distribuciones Linux:** `nexis-v0.0.1-linux-x86_64.tar.xz`
 
-> Los instaladores completos del lenguaje estarán disponibles en [installer/](installer/README.md) cuando se publique el compilador y el intérprete.
+Incluye el compilador `nexisc` y el intérprete `nexisi`. También puedes descargar los binarios sueltos desde [releases/compiler/v0.0.1](releases/compiler/v0.0.1/README.md) y [releases/interpreter/v0.0.1](releases/interpreter/v0.0.1/README.md).
 
-### 2. Aprende el lenguaje
+### 2. Prueba la sintaxis en tu editor
+
+Instala la **extensión de Visual Studio Code** (`v0.0.2`):
+
+- **VS Code:** abre la paleta de comandos (`Ctrl+Shift+P`) → *Extensions: Install from VSIX...* y selecciona el archivo `nexis-0.0.2.vsix`.
+- O descárgala desde [releases/extension/v0.0.2](releases/extension/v0.0.2/README.md).
+
+### 3. Aprende el lenguaje
 
 Sigue la [🕮 documentación oficial](docs/README.md), organizada en orden progresivo:
 
@@ -86,7 +95,7 @@ Sigue la [🕮 documentación oficial](docs/README.md), organizada en orden prog
 5. **POO** — [structs y clases](docs/language/poo/README.md).
 6. **Errores** — [catálogo completo de errores NX](docs/language/errors/errors.md) y [try/catch](docs/language/errors/try_catch.md).
 
-### 3. Práctica con ejemplos
+### 4. Práctica con ejemplos
 
 Revisa los [💻 ejemplos de código](examples/README.md) para ver el lenguaje en acción desde un *hola mundo* hasta módulos y librerías.
 
@@ -97,7 +106,7 @@ Revisa los [💻 ejemplos de código](examples/README.md) para ver el lenguaje e
 | [`docs/`](docs/README.md) | Documentación oficial del lenguaje (fundamentos, librería estándar, POO y errores). |
 | [`examples/`](examples/README.md) | Programas de ejemplo listos para probar. |
 | [`releases/`](releases/README.md) | Historial de versiones de cada componente y del producto completo. |
-| [`installer/`](installer/README.md) | Instaladores del lenguaje. |
+| [`installer/`](installer/README.md) | Instaladores del lenguaje (`.deb`, `.tar.xz`, `.exe`) de la versión demo `v0.0.1`. |
 | [`img/`](img/) | Recursos gráficos del proyecto. |
 
 ## Licencia
