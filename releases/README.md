@@ -17,7 +17,7 @@ El proyecto se organiza por componentes y, además, hay una carpeta especial par
 ## Releases publicadas
 
 | Release | Componente | Fecha | Tipo | Artefacto | Changelog |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|
 | v0.0.1 | Documentación | 2026-09-05 | Demo | [nexis-docs-v0.0.1.zip](docs/v0.0.1/nexis-docs-v0.0.1.zip) · [nexis-tests-v0.0.1.zip](docs/v0.0.1/nexis-tests-v0.0.1.zip) | [ver](docs/v0.0.1/README.md) |
 | v0.0.2 | Documentación | 2026-09-12 | Actualización | [nexis-docs-v0.0.2.zip](docs/v0.0.2/nexis-docs-v0.0.2.zip) · [nexis-tests-v0.0.2.zip](docs/v0.0.2/nexis-tests-v0.0.2.zip) | [ver](docs/v0.0.2/README.md) |
 | v0.0.1 | Extensión | 2026-09-05 | Demo | [nexis-programming-language-support-0.0.1.vsix](extension/v0.0.1/nexis-programming-language-support-0.0.1.vsix) | [ver](extension/v0.0.1/README.md) |
