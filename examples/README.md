@@ -19,13 +19,13 @@ Programas de ejemplo listos para probar, organizados en orden de dificultad. Cad
 
 ## Cómo ejecutarlos
 
-El intérprete (`nexisi`) y el compilador (`nexisc`) ya están disponibles en la **demo v0.0.1**:
+El intérprete (`nexisi`) y el compilador (`nexisc`) ya están disponibles en la **demo v0.0.2**:
 
 ```bash
 nexisi archivo.nxs     # o: nexisc archivo.nxs
 ```
 
-> La implementación actual (v0.0.1) es una **demo**: solo admite los programas de su alcance (tipos, operadores, `Console` e interpolación `fs"…"`). Los ejemplos avanzados (control de flujo, funciones, errores, POO y módulos) forman parte del alcance de la documentación y de la suite de tests; su ejecución llegará con **Nexis V1.0.0**. Mientras tanto sirven como referencia de sintaxis.
+> La implementación actual (v0.0.2) es una **demo**: solo admite los programas de su alcance (tipos, operadores, `Console` e interpolación `fs"…"`). Los ejemplos avanzados (control de flujo, funciones, errores, POO y módulos) forman parte del alcance de la documentación y de la suite de tests; su ejecución llegará con **Nexis V1.0.0**. Mientras tanto sirven como referencia de sintaxis.
 
 ## Convenciones de los ejemplos
 

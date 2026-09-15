@@ -6,6 +6,18 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/). Es
 
 ## [0.0.2] - 2026-09-10
 
+### Añadido
+
+- Documentación actualizada a `v0.0.2`:
+  - Nueva guía de instalación del lenguaje (`docs/installation.md`).
+  - Nueva documentación de librerías propias (`docs/language/modules/librerias_propias.md`).
+  - Catálogo de errores `NXxx` ampliado (`docs/errores.md` y `docs/language/errors/errors.md`).
+  - Índice y sección de tipos primitivos de la documentación actualizados.
+- Tests actualizados: métodos de la librería estándar renombrados de español a inglés (`agregar` → `add`, `obtener` → `get`, `longitud` → `length`, `apilar` → `push`, `contiene` → `contains`, etc.).
+- Compilador `nexisc` `v0.0.2` (actualización): binario regenerado para Linux x86_64 con paridad de versionado con el intérprete y el producto completo.
+- Intérprete `nexisi` `v0.0.2` (actualización): binario regenerado para Linux x86_64 con paridad de versionado con el compilador y el producto completo.
+- Producto completo `v0.0.2` (actualización): instaladores para Windows (`.exe` NSIS), Debian/Ubuntu (`.deb`) y otras distribuciones Linux (`.tar.xz`).
+
 ### Cambiado
 
 - Extensión de Visual Studio Code actualizada a `v0.0.2` (replanteamiento completo de la gramática TextMate):

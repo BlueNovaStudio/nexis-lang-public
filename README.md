@@ -56,26 +56,28 @@ for i in 1 .. 5 {
 
 | Componente | Estado |
 |---|---|
-| Documentación oficial | ✅ Publicada (`v0.0.1`) |
+| Documentación oficial | ✅ Publicada (`v0.0.2`) |
 | Extensión de VS Code | ✅ Publicada (`v0.0.2`) |
-| Compilador (`nexisc`) | ✅ Publicada (`v0.0.1`, demo) |
-| Intérprete (`nexisi`) | ✅ Publicada (`v0.0.1`, demo) |
-| Producto completo (instaladores) | ✅ Publicada (`v0.0.1`, demo) |
+| Compilador (`nexisc`) | ✅ Publicada (`v0.0.2`, demo) |
+| Intérprete (`nexisi`) | ✅ Publicada (`v0.0.2`, demo) |
+| Producto completo (instaladores) | ✅ Publicada (`v0.0.2`, demo) |
 | **Nexis V1.0.0** (versión final) | ⏳ En desarrollo |
 
-> Las versiones publicadas actualmente son una **demo**: la implementación (`nexisc`/`nexisi` v0.0.1) cubre tipos, operadores, `Console` e interpolación `fs"…"`. El control de flujo, las funciones, la POO, `try/catch` y los módulos reales llegarán con **Nexis V1.0.0**. Consulta el [índice de releases](releases/README.md).
+> Las versiones publicadas actualmente son una **demo**: la implementación (`nexisc`/`nexisi` v0.0.2) cubre tipos, operadores, `Console` e interpolación `fs"…"`. El control de flujo, las funciones, la POO, `try/catch` y los módulos reales llegarán con **Nexis V1.0.0**. Consulta el [índice de releases](releases/README.md).
 
 ## Comenzar
 
 ### 1. Instala el lenguaje
 
-Descarga el instalador de la **versión completa demo (v0.0.1)** para tu sistema desde [installer/](installer/README.md):
+Descarga el instalador de la **versión completa demo (v0.0.2)** para tu sistema:
 
-- **Windows:** `nexis-v0.0.1-windows-x86_64.exe`
-- **Debian/Ubuntu:** `nexis-v0.0.1-linux-x86_64.deb`
-- **Otras distribuciones Linux:** `nexis-v0.0.1-linux-x86_64.tar.xz`
+- **Windows:** `nexis-v0.0.2-windows-x86_64.exe`
+- **Debian/Ubuntu:** `nexis-v0.0.2-linux-x86_64.deb`
+- **Otras distribuciones Linux:** `nexis-v0.0.2-linux-x86_64.tar.xz`
 
-Incluye el compilador `nexisc` y el intérprete `nexisi`. También puedes descargar los binarios sueltos desde [releases/compiler/v0.0.1](releases/compiler/v0.0.1/README.md) y [releases/interpreter/v0.0.1](releases/interpreter/v0.0.1/README.md).
+Sigue la [guía de instalación paso a paso](installer/README.md): descarga el archivo en tu carpeta de Descargas, abre una terminal (o PowerShell), ejecuta el instalador según tu plataforma, comprueba que `nexisc`/`nexisi` están en el `PATH` y verifica la instalación con `--version`.
+
+Incluye el compilador `nexisc` y el intérprete `nexisi`. También puedes descargar los binarios sueltos desde [releases/compiler/v0.0.2](releases/compiler/v0.0.2/README.md) y [releases/interpreter/v0.0.2](releases/interpreter/v0.0.2/README.md).
 
 ### 2. Prueba la sintaxis en tu editor
 

@@ -10,8 +10,36 @@ Esta carpeta guarda las **versiones del lenguaje Nexis como producto completo** 
 
 | Versión | Estado |
 |---|---|
+| **v0.0.2** | ✅ Publicada — instaladores para Windows (`.exe`) y Linux (`.deb`, `.tar.xz`) |
 | **v0.0.1** (demo) | ✅ Publicada — instaladores para Windows (`.exe`) y Linux (`.deb`, `.tar.xz`) más el paquete universal `.zip` |
 | **V1.0.0** | ⏳ Pendiente — requiere el alcance completo del lenguaje (control de flujo, funciones, POO, `try/catch` y módulos reales) y el instalador de macOS |
+
+## v0.0.2 — Producto completo (actualización)
+
+Segunda versión del lenguaje como producto instalable. Publicada el **2026-09-12**.
+
+### Instaladores
+
+| Plataforma | Artefacto |
+|---|---|
+| **Debian/Ubuntu** | [nexis-v0.0.2-linux-x86_64.deb](v0.0.2/nexis-v0.0.2-linux-x86_64.deb) — instala con `sudo dpkg -i`. |
+| **Otras distros Linux** | [nexis-v0.0.2-linux-x86_64.tar.xz](v0.0.2/nexis-v0.0.2-linux-x86_64.tar.xz) — trae `install.sh` y `uninstall.sh`. |
+| **Windows** | [nexis-v0.0.2-windows-x86_64.exe](v0.0.2/nexis-v0.0.2-windows-x86_64.exe) — instalador NSIS que instala en `%LOCALAPPDATA%\Nexis` y añade `bin\` al `PATH`. |
+
+### Contenido
+
+- Compilador `nexisc` e intérprete `nexisi`, ambos en su versión `v0.0.2`.
+- Documentación completa del lenguaje (`docs/`) actualizada: guía de instalación, librerías propias y catálogo de errores ampliado.
+- Suite de tests del lenguaje (`tests/`).
+- Extensión de VS Code (`nexis-0.0.2.vsix`).
+
+### Cambios respecto a v0.0.1
+
+- Compilador e intérprete regenerados con la versión actualizada del script de build.
+- Documentación ampliada con `installation.md`, `librerias_propias.md` y catálogo de errores NX actualizado.
+- Extensión actualizada a v0.0.2 (gramática realineada, `fs"…"`, `#inject`, 20 snippets e icono propio).
+
+---
 
 ## v0.0.1 — Producto completo (demo)
 

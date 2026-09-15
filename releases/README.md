@@ -17,17 +17,21 @@ El proyecto se organiza por componentes y, además, hay una carpeta especial par
 ## Releases publicadas
 
 | Release | Componente | Fecha | Tipo | Artefacto | Changelog |
-|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|
 | v0.0.1 | Documentación | 2026-09-05 | Demo | [nexis-docs-v0.0.1.zip](docs/v0.0.1/nexis-docs-v0.0.1.zip) · [nexis-tests-v0.0.1.zip](docs/v0.0.1/nexis-tests-v0.0.1.zip) | [ver](docs/v0.0.1/README.md) |
+| v0.0.2 | Documentación | 2026-09-12 | Actualización | [nexis-docs-v0.0.2.zip](docs/v0.0.2/nexis-docs-v0.0.2.zip) · [nexis-tests-v0.0.2.zip](docs/v0.0.2/nexis-tests-v0.0.2.zip) | [ver](docs/v0.0.2/README.md) |
 | v0.0.1 | Extensión | 2026-09-05 | Demo | [nexis-programming-language-support-0.0.1.vsix](extension/v0.0.1/nexis-programming-language-support-0.0.1.vsix) | [ver](extension/v0.0.1/README.md) |
 | v0.0.2 | Extensión | 2026-09-10 | Actualización | [nexis-0.0.2.vsix](extension/v0.0.2/nexis-0.0.2.vsix) | [ver](extension/v0.0.2/README.md) |
 | v0.0.1 | Compilador | 2026-09-09 | Demo | [nexisc-v0.0.1-linux-x86_64.zip](compiler/v0.0.1/nexisc-v0.0.1-linux-x86_64.zip) | [ver](compiler/v0.0.1/README.md) |
+| v0.0.2 | Compilador | 2026-09-12 | Actualización | [nexisc-v0.0.2-linux-x86_64.zip](compiler/v0.0.2/nexisc-v0.0.2-linux-x86_64.zip) | [ver](compiler/v0.0.2/README.md) |
 | v0.0.1 | Intérprete | 2026-09-09 | Demo | [nexisi-v0.0.1-linux-x86_64.zip](interpreter/v0.0.1/nexisi-v0.0.1-linux-x86_64.zip) | [ver](interpreter/v0.0.1/README.md) |
+| v0.0.2 | Intérprete | 2026-09-12 | Actualización | [nexisi-v0.0.2-linux-x86_64.zip](interpreter/v0.0.2/nexisi-v0.0.2-linux-x86_64.zip) | [ver](interpreter/v0.0.2/README.md) |
 | v0.0.1 | Producto completo | 2026-09-09 | Demo | [.deb](nexis/v0.0.1/nexis-v0.0.1-linux-x86_64.deb) · [.tar.xz](nexis/v0.0.1/nexis-v0.0.1-linux-x86_64.tar.xz) · [.exe](nexis/v0.0.1/nexis-v0.0.1-windows-x86_64.exe) · [.zip](nexis/v0.0.1/nexis-v0.0.1-linux-x86_64.zip) | [ver](nexis/README.md) |
+| v0.0.2 | Producto completo | 2026-09-12 | Actualización | [.deb](nexis/v0.0.2/nexis-v0.0.2-linux-x86_64.deb) · [.tar.xz](nexis/v0.0.2/nexis-v0.0.2-linux-x86_64.tar.xz) · [.exe](nexis/v0.0.2/nexis-v0.0.2-windows-x86_64.exe) | [ver](nexis/README.md) |
 
 ## Producto completo (Nexis)
 
-La versión **demo** del producto completo (**Nexis `v0.0.1`**) ya está disponible con instaladores para Windows y Linux en [releases/nexis](nexis/README.md). La versión final **Nexis V1.0.0** sigue en desarrollo.
+La versión **demo** del producto completo (**Nexis `v0.0.1` y `v0.0.2`**) ya está disponible con instaladores para Windows y Linux en [releases/nexis](nexis/README.md). La versión final **Nexis V1.0.0** sigue en desarrollo.
 
 ## Cómo añadir una nueva versión
 
