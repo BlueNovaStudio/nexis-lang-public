@@ -4,7 +4,7 @@ Los operadores permiten realizar cálculos, comparaciones y decisiones dentro de
 
 ## Navegación
 
-- [Documentación principal](../README.md)
+- [Documentación principal](README.md)
 - [Variables y entrada/salida](../variables/README.md)
 - [Catálogo de errores NX](../errors/errors.md)
 

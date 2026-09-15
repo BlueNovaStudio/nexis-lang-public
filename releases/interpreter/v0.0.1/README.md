@@ -4,7 +4,7 @@
 
 | Plataforma | Artefacto |
 |---|---|
-| Linux (x86_64) | [nexisi-v0.0.1-linux-x86_64.zip](nexisi-v0.0.1-linux-x86_64.zip) |
+| Linux (x86_64) | [nexisi-v0.0.1-x86_64.zip](nexisi-v0.0.1-x86_64.zip) |
 
 Se genera con `interpreter/scripts/release.sh` (estructura análoga a la del compilador).
 
@@ -24,7 +24,7 @@ Se genera con `interpreter/scripts/release.sh` (estructura análoga a la del com
 ## Instalación (Linux)
 
 ```bash
-unzip nexisi-v0.0.1-linux-x86_64.zip -d nexisi
+unzip nexisi-v0.0.1-x86_64.zip -d nexisi
 cd nexisi
 mkdir -p ~/.local/bin
 install -m 755 nexisi ~/.local/bin/

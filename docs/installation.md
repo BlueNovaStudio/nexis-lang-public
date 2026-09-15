@@ -6,7 +6,7 @@ Guía oficial para instalar el compilador **`nexisc`** desde el `.zip` descargad
 
 Al descomprimir `nexisc-v<VERSIÓN>-<plataforma>.zip` obtienes el ejecutable `nexisc` (en Windows, `nexisc.exe`). Es un binario único, no necesita instalar runtime ni dependencias.
 
-> Reemplaza `<VERSIÓN>` por la versión que descargaste (ej: `nexisc-v0.0.1-linux-x86_64.zip`) y `<URL-DEL-ZIP>` por la dirección de descarga.
+> Reemplaza `<VERSIÓN>` por la versión que descargaste (ej: `nexisc-v0.0.1-x86_64.zip`) y `<URL-DEL-ZIP>` por la dirección de descarga.
 
 ---
 
@@ -15,8 +15,8 @@ Al descomprimir `nexisc-v<VERSIÓN>-<plataforma>.zip` obtienes el ejecutable `ne
 ### 1. Descargar y descomprimir
 
 ```bash
-wget <URL-DEL-ZIP>/nexisc-v<VERSIÓN>-linux-x86_64.zip
-unzip nexisc-v<VERSIÓN>-linux-x86_64.zip -d nexisc
+wget <URL-DEL-ZIP>/nexisc-v<VERSIÓN>-x86_64.zip
+unzip nexisc-v<VERSIÓN>-x86_64.zip -d nexisc
 cd nexisc
 ```
 
@@ -129,5 +129,5 @@ Hola, mundo
 nexisc --help
 ```
 
-- Códigos de error `NX` explicados en [el catálogo de errores](../docs/language/errors/errors.md).
-- Documentación completa del lenguaje en [`docs/`](../docs/README.md).
+- Códigos de error `NX` explicados en [el catálogo de errores](language/errors/errors.md).
+- Documentación completa del lenguaje en [`docs/`](README.md).

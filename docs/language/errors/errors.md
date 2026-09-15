@@ -2,12 +2,12 @@
 
 Este documento es la **referencia oficial de errores** de Nexis. Cada error tiene un código único con el formato `NXXX` para que sea fácil de buscar, reportar y resolver.
 
-> **Cómo usar este catálogo:** busca el código `NXxx` en tu mensaje de error, ve a la sección correspondiente y sigue la solución paso a paso. Si el código no aparece, consulta la versión extendida en [language/errors/errors.md](language/errors/errors.md).
+> **Cómo usar este catálogo:** busca el código `NXxx` en tu mensaje de error, ve a la sección correspondiente y sigue la solución paso a paso. Si el código no aparece, consulta la versión extendida en [errors.md](errors.md).
 
 ## Navegación rápida
 
-- [Cómo funciona el sistema de errores](language/errors/README.md)
-- [Manejo de excepciones (try/catch)](language/errors/try_catch.md)
+- [Cómo funciona el sistema de errores](README.md)
+- [Manejo de excepciones (try/catch)](try_catch.md)
 - [Documentación principal](README.md)
 
 ---
@@ -962,7 +962,7 @@ lanzar ErrorValidacion("El valor ingresado es inválido")
 
 2. Si necesitas un error propio, define una clase que herede de `Error` (ver el capítulo de POO) o usa una de las clases documentadas (`ErrorIndice`, `ErrorDivision`, `ErrorTipo`, `ErrorEntrada`, `ErrorArchivo`, `ErrorRed`, `ErrorMemoria`, `ErrorValidacion`, `ErrorAssert`).
 
-**Cómo evitarlo.** `lanzar` siempre recibe `ErrorTipo("mensaje")`, nunca literales directos. Revisa la tabla de tipos de error en [try_catch.md](language/errors/try_catch.md).
+**Cómo evitarlo.** `lanzar` siempre recibe `ErrorTipo("mensaje")`, nunca literales directos. Revisa la tabla de tipos de error en [try_catch.md](try_catch.md).
 
 ---
 

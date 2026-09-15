@@ -54,7 +54,7 @@ Un solo comando compila para las tres plataformas y deja los `.zip` aquí:
 compiler/scripts/release.sh --all
 ```
 
-- `nexisc-v<versión>-linux-x86_64.zip`
+- `nexisc-v<versión>-x86_64.zip`
 - `nexisc-v<versión>-windows-x86_64.zip` (el `.exe`)
 - `nexisc-v<versión>-mac-x86_64.zip`
 

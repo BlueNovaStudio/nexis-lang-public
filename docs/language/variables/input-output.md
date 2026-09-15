@@ -8,7 +8,7 @@ La entrada y salida son esenciales en cualquier lenguaje de programación. Permi
 
 - [Volver a variables](README.md)
 - [Declaración e inicialización](declaration.md)
-- [Operadores](../operadores/operadores.md)
+- [Operadores](../operators/operadores.md)
 
 ---
 

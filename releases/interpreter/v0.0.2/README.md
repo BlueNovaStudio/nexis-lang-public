@@ -22,7 +22,7 @@ Segunda versión del intérprete de Nexis (binario `nexisi`). Generado con `inst
 
 | Plataforma | Artefacto |
 |---|---|
-| Linux (x86_64) | [nexisi-v0.0.2-linux-x86_64.zip](nexisi-v0.0.2-linux-x86_64.zip) |
+| Linux (x86_64) | [nexisi-v0.0.2-x86_64.zip](nexisi-v0.0.2-x86_64.zip) |
 
 ## Cambios respecto a la anterior (v0.0.1)
 
@@ -32,7 +32,7 @@ Segunda versión del intérprete de Nexis (binario `nexisi`). Generado con `inst
 ## Instalación (Linux)
 
 ```bash
-unzip nexisi-v0.0.2-linux-x86_64.zip -d nexisi
+unzip nexisi-v0.0.2-x86_64.zip -d nexisi
 cd nexisi
 mkdir -p ~/.local/bin
 install -m 755 nexisi ~/.local/bin/
