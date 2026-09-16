@@ -10,7 +10,7 @@ Esta carpeta guarda las **versiones del lenguaje Nexis como producto completo** 
 
 | Versión | Estado |
 |---|---|
-| **v0.0.2** | ✅ Publicada — instaladores para Windows (`.exe`) y Linux (`.deb`, `.tar.xz`) |
+| **v0.0.2** | ✅ Publicada — instaladores para Windows (`.exe`) y Linux (`.deb`, `.tar.xz`), en x86_64 y aarch64 |
 | **v0.0.1** (demo) | ✅ Publicada — instaladores para Windows (`.exe`) y Linux (`.deb`, `.tar.xz`) más el paquete universal `.zip` |
 | **V1.0.0** | ⏳ Pendiente — requiere el alcance completo del lenguaje (control de flujo, funciones, POO, `try/catch` y módulos reales) y el instalador de macOS |
 
@@ -22,9 +22,12 @@ Segunda versión del lenguaje como producto instalable. Publicada el **2026-09-1
 
 | Plataforma | Artefacto |
 |---|---|
-| **Debian/Ubuntu** | [nexis-v0.0.2-linux-x86_64.deb](v0.0.2/nexis-v0.0.2-linux-x86_64.deb) — instala con `sudo dpkg -i`. |
-| **Otras distros Linux** | [nexis-v0.0.2-linux-x86_64.tar.xz](v0.0.2/nexis-v0.0.2-linux-x86_64.tar.xz) — trae `install.sh` y `uninstall.sh`. |
-| **Windows** | [nexis-v0.0.2-windows-x86_64.exe](v0.0.2/nexis-v0.0.2-windows-x86_64.exe) — instalador NSIS que instala en `%LOCALAPPDATA%\Nexis` y añade `bin\` al `PATH`. |
+| **Debian/Ubuntu (x86_64)** | [nexis-v0.0.2-linux-x86_64.deb](v0.0.2/nexis-v0.0.2-linux-x86_64.deb) — instala con `sudo dpkg -i`. |
+| **Otras distros Linux (x86_64)** | [nexis-v0.0.2-linux-x86_64.tar.xz](v0.0.2/nexis-v0.0.2-linux-x86_64.tar.xz) — trae `install.sh` y `uninstall.sh`. |
+| **Windows (x86_64)** | [nexis-v0.0.2-windows-x86_64.exe](v0.0.2/nexis-v0.0.2-windows-x86_64.exe) — instalador NSIS que instala en `%LOCALAPPDATA%\Nexis` y añade `bin\` al `PATH`. |
+| **Debian/Ubuntu (aarch64)** | [nexis-v0.0.2-linux-aarch64.deb](v0.0.2/nexis-v0.0.2-linux-aarch64.deb) — instala con `sudo dpkg -i`. |
+| **Otras distros Linux (aarch64)** | [nexis-v0.0.2-linux-aarch64.tar.xz](v0.0.2/nexis-v0.0.2-linux-aarch64.tar.xz) — trae `install.sh` y `uninstall.sh`. |
+| **Windows (aarch64)** | [nexis-v0.0.2-windows-aarch64.exe](v0.0.2/nexis-v0.0.2-windows-aarch64.exe) — instalador NSIS que instala en `%LOCALAPPDATA%\Nexis` y añade `bin\` al `PATH`. |
 
 ### Contenido
 
@@ -61,7 +64,7 @@ Primera versión del lenguaje como producto instalable. Publicada el **2026-09-0
 - Binarios: `bin/nexisc` (compilador) y `bin/nexisi` (intérprete), ambos en su versión `v0.0.1`.
 - Documentación completa del lenguaje (`docs/`).
 - Suite de tests del lenguaje (`tests/`).
-- Extensión de VS Code (`nexis-programming-language-support-0.0.1.vsix`).
+- Extensión de VS Code (`nexis-0.0.1.vsix`).
 
 ### Limitaciones de la demo v0.0.1
 

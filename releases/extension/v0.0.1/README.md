@@ -18,6 +18,6 @@ Primera versión de la extensión **Nexis Language Support by BlueNova** para Vi
 
 ## Artefactos
 
-- [nexis-programming-language-support-0.0.1.vsix](nexis-programming-language-support-0.0.1.vsix)
+- [nexis-0.0.1.vsix](nexis-0.0.1.vsix)
 
 > El código fuente de la extensión se mantiene en el repositorio privado de desarrollo de Nexis (nexis-lang).

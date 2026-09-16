@@ -22,6 +22,7 @@ Segunda versión del compilador de Nexis (binario `nexisc`). Generado con `insta
 ## Artefactos
 
 - [nexisc-v0.0.2-x86_64.zip](nexisc-v0.0.2-x86_64.zip)
+- [nexisc-v0.0.2-aarch64.zip](nexisc-v0.0.2-aarch64.zip)
 
 ## Cambios respecto a la anterior (v0.0.1)
 

@@ -16,9 +16,12 @@ Segunda versión del lenguaje Nexis como producto instalable. Incluye compilador
 
 | Plataforma | Artefacto |
 |---|---|
-| **Debian/Ubuntu** | [nexis-v0.0.2-linux-x86_64.deb](nexis-v0.0.2-linux-x86_64.deb) — instala con `sudo dpkg -i`. |
-| **Otras distros Linux** | [nexis-v0.0.2-linux-x86_64.tar.xz](nexis-v0.0.2-linux-x86_64.tar.xz) — trae `install.sh` y `uninstall.sh`. |
-| **Windows** | [nexis-v0.0.2-windows-x86_64.exe](nexis-v0.0.2-windows-x86_64.exe) — instalador NSIS que instala en `%LOCALAPPDATA%\Nexis` y añade `bin\` al `PATH`. |
+| **Debian/Ubuntu (x86_64)** | [nexis-v0.0.2-linux-x86_64.deb](nexis-v0.0.2-linux-x86_64.deb) — instala con `sudo dpkg -i`. |
+| **Otras distros Linux (x86_64)** | [nexis-v0.0.2-linux-x86_64.tar.xz](nexis-v0.0.2-linux-x86_64.tar.xz) — trae `install.sh` y `uninstall.sh`. |
+| **Windows (x86_64)** | [nexis-v0.0.2-windows-x86_64.exe](nexis-v0.0.2-windows-x86_64.exe) — instalador NSIS que instala en `%LOCALAPPDATA%\Nexis` y añade `bin\` al `PATH`. |
+| **Debian/Ubuntu (aarch64)** | [nexis-v0.0.2-linux-aarch64.deb](nexis-v0.0.2-linux-aarch64.deb) — instala con `sudo dpkg -i`. |
+| **Otras distros Linux (aarch64)** | [nexis-v0.0.2-linux-aarch64.tar.xz](nexis-v0.0.2-linux-aarch64.tar.xz) — trae `install.sh` y `uninstall.sh`. |
+| **Windows (aarch64)** | [nexis-v0.0.2-windows-aarch64.exe](nexis-v0.0.2-windows-aarch64.exe) — instalador NSIS que instala en `%LOCALAPPDATA%\Nexis` y añade `bin\` al `PATH`. |
 
 > **macOS:** el instalador `.pkg` debe generarse en un equipo Mac; aún no está publicado.
 

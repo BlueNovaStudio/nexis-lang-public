@@ -23,6 +23,7 @@ Segunda versión del intérprete de Nexis (binario `nexisi`). Generado con `inst
 | Plataforma | Artefacto |
 |---|---|
 | Linux (x86_64) | [nexisi-v0.0.2-x86_64.zip](nexisi-v0.0.2-x86_64.zip) |
+| Linux/macOS (aarch64) | [nexisi-v0.0.2-aarch64.zip](nexisi-v0.0.2-aarch64.zip) |
 
 ## Cambios respecto a la anterior (v0.0.1)
 

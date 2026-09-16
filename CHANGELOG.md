@@ -14,9 +14,10 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/). Es
   - Catálogo de errores `NXxx` ampliado (`docs/errores.md` y `docs/language/errors/errors.md`).
   - Índice y sección de tipos primitivos de la documentación actualizados.
 - Tests actualizados: métodos de la librería estándar renombrados de español a inglés (`agregar` → `add`, `obtener` → `get`, `longitud` → `length`, `apilar` → `push`, `contiene` → `contains`, etc.).
-- Compilador `nexisc` `v0.0.2` (actualización): binario regenerado para Linux x86_64 con paridad de versionado con el intérprete y el producto completo.
-- Intérprete `nexisi` `v0.0.2` (actualización): binario regenerado para Linux x86_64 con paridad de versionado con el compilador y el producto completo.
-- Producto completo `v0.0.2` (actualización): instaladores para Windows (`.exe` NSIS), Debian/Ubuntu (`.deb`) y otras distribuciones Linux (`.tar.xz`).
+- Compilador `nexisc` `v0.0.2` (actualización): binario regenerado para Linux x86_64 y aarch64 con paridad de versionado con el intérprete y el producto completo.
+- Intérprete `nexisi` `v0.0.2` (actualización): binario regenerado para Linux x86_64 y aarch64 con paridad de versionado con el compilador y el producto completo.
+- Producto completo `v0.0.2` (actualización): instaladores para Windows (`.exe` NSIS), Debian/Ubuntu (`.deb`) y otras distribuciones Linux (`.tar.xz`), en x86_64 y aarch64.
+- Extensión de VS Code `v0.0.1`: artefacto actualizado y renombrado a `nexis-0.0.1.vsix` (reemplaza al viejo `nexis-programming-language-support-0.0.1.vsix`).
 
 ### Cambiado
 
