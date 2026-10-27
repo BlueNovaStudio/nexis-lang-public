@@ -41,12 +41,11 @@ Inicializar es **asignar un valor por primera vez** a una variable.
 nombre_variable = valor
 ```
 
-> **Regla:**  
-<<<<<<< HEAD
+> **Regla:**
+ 
 > La asignación de una variable ya declarada no lleva punto y coma. Si la variable se declaró sin valor, su declaración sí termina con `;`.
-=======
+
 > La inicialización **No lleva punto y coma (`;`) y si lleva dar un aviso de que es innecesario el (`;`)**.
->>>>>>> 1897a5d1489b2f7bd1a2401509995682eec32580
 
 ### Ejemplos:
 
@@ -162,11 +161,9 @@ En Nexis, **declarar una variable sin inicializarla no genera error**, pero usar
 ### Incorrecto:
 
 ```
-<<<<<<< HEAD
 int x;
-=======
+
 int x
->>>>>>> 1897a5d1489b2f7bd1a2401509995682eec32580
 Console.print(x)    // Error: La declaración de la variable 'x' debe terminar con ';' y requiere inicialización previa a su uso.
 ```
 
