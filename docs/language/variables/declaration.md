@@ -11,12 +11,11 @@ tipo_dato nombre_variable;
 ```
 
 > **Regla:**  
-> El tipo de dato va **antes** del nombre de la variable.  
-<<<<<<< HEAD
+> El tipo de dato va **antes** del nombre de la variable.
+
 > Si la declaración no tiene inicializador, termina con punto y coma (`;`).
-=======
+
 > **Lleva punto y coma obligatorio (`;`)** al final.
->>>>>>> 1897a5d1489b2f7bd1a2401509995682eec32580
 
 ### Ejemplos:
 
