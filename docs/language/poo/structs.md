@@ -8,9 +8,9 @@ El `struct` se define con la palabra clave `struct` seguida del nombre y un bloq
 
 ```nexis
 struct Contacto {
-    string nombre
-    string telefono
-    string categoria
+    string nombre;
+    string telefono;
+    string categoria;
 }
 ```
 
@@ -33,8 +33,8 @@ Los campos se acceden con el operador punto (`.`).
 
 ```nexis
 struct Punto {
-    int x
-    int y
+    int x;
+    int y;
 }
 
 Punto origen = Punto()
@@ -55,11 +55,11 @@ Console.print("Desplazamiento: (" + dx + ", " + dy + ")")
 Los structs se pueden almacenar en vectores y mapas:
 
 ```nexis
-#inject vector;
+#inject Vector;
 
 struct Contacto {
-    string nombre
-    string telefono
+    string nombre;
+    string telefono;
 }
 
 Vector<Contacto> agenda = []
@@ -67,9 +67,9 @@ Vector<Contacto> agenda = []
 Contacto c = Contacto()
 c.nombre = "Luis"
 c.telefono = "987654321"
-agenda.agregar(c)
+agenda.add(c)
 
-Console.print(agenda.obtener(0).nombre)   // Luis
+Console.print(agenda.get(0).nombre)   // Luis
 ```
 
 ## 5. Buenas prácticas

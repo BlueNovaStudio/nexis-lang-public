@@ -4,8 +4,8 @@ Los operadores permiten realizar cálculos, comparaciones y decisiones dentro de
 
 ## Navegación
 
-- [Documentación principal](README.md)
-- [Variables y entrada/salida](../variables/README.md)
+- [Documentación principal](../../README.md)
+- [Variables y entrada/salida](../variables/declaration.md)
 - [Catálogo de errores NX](../errors/errors.md)
 
 ---
@@ -179,12 +179,12 @@ Cuando hay varias operaciones en una línea, se resuelven siguiendo este orden:
 2. Potencia `**`
 3. Multiplicación, división y módulo `* / %`
 4. Suma y resta `+ -`
-5. Comparaciones `> < >= <=`
-6. Igualdad `== !=`
-7. AND `&&`
-8. OR `||`
-9. Asignación `= += -= *= /= %=`
-10. Decisión estructural `=> <-->`
+5. Decisión estructural `=> <-->`
+6. Comparaciones `> < >= <=`
+7. Igualdad `== !=`
+8. AND `&&`
+9. OR `||`
+10. Asignación `= += -= *= /= %=`
 
 ### Ejemplo
 

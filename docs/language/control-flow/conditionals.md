@@ -1,4 +1,4 @@
-# 📘 Condicionales en Nexis
+# Condicionales en Nexis
 
 ## Introducción
 
@@ -6,7 +6,7 @@ Los condicionales permiten ejecutar diferentes bloques de código según se cump
 
 ---
 
-## 1. Sintaxis estilo C/Java/JavaScript (con llaves)
+## 1. Sintaxis estilo (con llaves)
 
 ### Estructura básica
 
@@ -66,7 +66,7 @@ if (edad >= 18 && tiene_licencia) {
 
 ---
 
-## 2. Sintaxis estilo Python (sin llaves)
+## 2. Sintaxis estilo (sin llaves)
 
 ### Estructura básica
 
@@ -128,7 +128,7 @@ else:
 
 ## 3. Comparación de estilos
 
-| Característica | Estilo C/Java/JS | Estilo Python |
+| Característica | Estilo (Con llaves) | Estilo (Sin llaves) |
 |----------------|------------------|---------------|
 | Delimitadores | `{}` | `:` + indentación |
 | Condición | `(condicion)` | `(condicion)` |
@@ -160,13 +160,13 @@ if (edad >= 18) {
 
 ## 4. Reglas para elegir el estilo
 
-### Usar estilo Python (con `:`) cuando:
+### Usar estilo (con `:`) cuando:
 
 - El bloque `if`, `else if` o `else` tiene **solo una línea**.
 - La condición es simple y directa.
 - Se busca máxima legibilidad y minimalismo.
 
-### Usar estilo C/Java/JS (con `{}`) cuando:
+### Usar estilo (con `{}`) cuando:
 
 - El bloque tiene **más de una línea**.
 - Hay múltiples operaciones dentro del bloque.
@@ -178,13 +178,13 @@ if (edad >= 18) {
 int edad = 18
 string nombre = "Ana"
 
-// Estilo Python para una línea
+// Estilo para una línea
 if (edad >= 18):
     Console.print("Mayor de edad")
 else:
     Console.print("Menor de edad")
 
-// Estilo C/Java/JS para múltiples líneas
+// Estilo para múltiples líneas
 if (edad >= 18) {
     string mensaje = "Bienvenido, " + nombre
     Console.print(mensaje)
@@ -533,9 +533,9 @@ switch (dia) {
 
 1. **Elige un estilo y sé consistente:** No mezcles estilos en el mismo archivo sin razón.
 
-2. **Usa estilo Python para condiciones simples:** Cuando el bloque tiene una línea, `:` es más limpio.
+2. **Usa estilo (Sin llaves) para condiciones simples:** Cuando el bloque tiene una línea, `:` es más limpio.
 
-3. **Usa estilo C/Java/JS para bloques largos:** Las llaves `{}` ayudan a delimitar bloques extensos.
+3. **Usa estilo (Con llaves) para bloques largos:** Las llaves `{}` ayudan a delimitar bloques extensos.
 
 4. **Siempre usa paréntesis en la condición:** Aunque en Python no son obligatorios, en Nexis se recomienda usarlos para claridad.
 

@@ -4,15 +4,58 @@ Esta carpeta guarda las **versiones del lenguaje Nexis como producto completo** 
 
 - Documentación y tests (`docs/`)
 - Extensión de VS Code (`releases/extension/`)
-- Compilador (`nexisc`) e intérprete (`nexisi`)
+- Compilador (`nexisc`) e intérprete (`nexisi`).
+  > A partir de `v0.0.6` ambos vienen juntos dentro de un único ejecutable unificado: `nexis` (`nexis build`, `nexis run`).
 
 ## Estado
 
 | Versión | Estado |
 |---|---|
+| **v0.0.6** | ✅ Publicada (demo) — ejecutable unificado `nexis` (Linux x86_64 y Windows `.exe`) |
+| **v0.0.5** | ✅ Publicada (demo) — primer ejecutable unificado `nexis` (Linux x86_64 y Windows `.exe`) |
+| **v0.0.4** | ✅ Publicada (demo) — instaladores `.deb`, `.tar.xz` y `.exe` |
+| **v0.0.3** | ✅ Publicada (demo) — instaladores `.deb` y `.tar.xz` |
 | **v0.0.2** | ✅ Publicada — instaladores para Windows (`.exe`) y Linux (`.deb`, `.tar.xz`), en x86_64 y aarch64 |
 | **v0.0.1** (demo) | ✅ Publicada — instaladores para Windows (`.exe`) y Linux (`.deb`, `.tar.xz`) más el paquete universal `.zip` |
 | **V1.0.0** | ⏳ Pendiente — requiere el alcance completo del lenguaje (control de flujo, funciones, POO, `try/catch` y módulos reales) y el instalador de macOS |
+
+## v0.0.6 — Ejecutable unificado
+
+Versión demo basada en un **único ejecutable `nexis`** que embebe el compilador y el intérprete: ya no hace falta descargar binarios separados (`nexisc`/`nexisi`).
+
+### Artefactos
+
+| Plataforma | Artefacto |
+|---|---|
+| **Linux (x86_64)** | [nexis-v0.0.6-x86_64](v0.0.6/nexis-v0.0.6-x86_64) — binario suelto. |
+| **Windows (x86_64)** | [nexis-v0.0.6-x86_64.exe](v0.0.6/nexis-v0.0.6-x86_64.exe) — binario suelto. |
+
+### Uso
+
+```sh
+nexis build <archivo.nxs>   # compila el programa
+nexis run <archivo.nxs>     # compila y ejecuta
+```
+
+### Novedades de la versión
+
+- Ordenamientos completos (burbuja, selección, inserción, quick, merge, counting) sobre `Vector<T>` y demás colecciones.
+- Genéricos con plantillas (`template <type_full T>`), `foreach` en todas sus variantes, variables globales y scope.
+- Structs y clases completas (`init`, `self`, métodos) y funciones avanzadas (parámetros por defecto, recursión mutua).
+- Suite de **101 pruebas** verificación; detalles en la [guía de demostración](../../docs/demo-v0.0.6.md).
+
+## v0.0.5 — Primer ejecutable unificado
+
+Primera versión que reemplaza los binarios separados `nexisc`/`nexisi` por el ejecutable unificado `nexis` (mismos comandos: `nexis build` y `nexis run`).
+
+### Artefactos
+
+| Plataforma | Artefacto |
+|---|---|
+| **Linux (x86_64)** | [nexis-v0.0.5-x86_64](v0.0.5/nexis-v0.0.5-x86_64) — binario suelto. |
+| **Windows (x86_64)** | [nexis-v0.0.5-x86_64.exe](v0.0.5/nexis-v0.0.5-x86_64.exe) — binario suelto. |
+
+---
 
 ## v0.0.2 — Producto completo (actualización)
 

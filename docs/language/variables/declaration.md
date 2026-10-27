@@ -12,7 +12,11 @@ tipo_dato nombre_variable;
 
 > **Regla:**  
 > El tipo de dato va **antes** del nombre de la variable.  
-> **Lleva punto y coma (`;`)** al final.
+<<<<<<< HEAD
+> Si la declaración no tiene inicializador, termina con punto y coma (`;`).
+=======
+> **Lleva punto y coma obligatorio (`;`)** al final.
+>>>>>>> 1897a5d1489b2f7bd1a2401509995682eec32580
 
 ### Ejemplos:
 
@@ -39,7 +43,11 @@ nombre_variable = valor
 ```
 
 > **Regla:**  
-> La inicialización **No lleva punto y coma (`;`)**.
+<<<<<<< HEAD
+> La asignación de una variable ya declarada no lleva punto y coma. Si la variable se declaró sin valor, su declaración sí termina con `;`.
+=======
+> La inicialización **No lleva punto y coma (`;`) y si lleva dar un aviso de que es innecesario el (`;`)**.
+>>>>>>> 1897a5d1489b2f7bd1a2401509995682eec32580
 
 ### Ejemplos:
 
@@ -65,6 +73,8 @@ Nexis permite **declarar e inicializar** al mismo tiempo.
 tipo nombre_variable = valor
 ```
 
+> Una declaración que ya incluye su valor inicial no lleva `;`.
+
 ### Ejemplos:
 
 ```
@@ -84,7 +94,7 @@ También es válido **declarar una variable y luego inicializarla más adelante*
 ### Ejemplo:
 
 ```
-int contador;         // declaración
+int contador;         // declaración sin inicializador
 contador = 10         // inicialización posterior
 ```
 
@@ -138,7 +148,7 @@ PI = 3.14159       // error: no se puede asignar después
 
 | Acción | Sintaxis | ¿Lleva `;`? |
 |--------|----------|-------------|
-| Declarar | `tipo nombre` | Si |
+| Declarar sin inicializar | `tipo nombre;` | Sí |
 | Inicializar | `nombre = valor` | No |
 | Declarar + Inicializar | `tipo nombre = valor` | No |
 | Declarar con `auto` | `auto nombre = valor` | No |
@@ -153,14 +163,18 @@ En Nexis, **declarar una variable sin inicializarla no genera error**, pero usar
 ### Incorrecto:
 
 ```
+<<<<<<< HEAD
+int x;
+=======
 int x
-Console.print(x)   // error: x no ha sido inicializada
+>>>>>>> 1897a5d1489b2f7bd1a2401509995682eec32580
+Console.print(x)    // Error: La declaración de la variable 'x' debe terminar con ';' y requiere inicialización previa a su uso.
 ```
 
 ### Correcto:
 
 ```
-int x
+int x;
 x = 5
 Console.print(x)   // imprime 5
 ```

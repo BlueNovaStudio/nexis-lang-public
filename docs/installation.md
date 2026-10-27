@@ -4,9 +4,9 @@ Guía oficial para instalar el compilador **`nexisc`** desde el `.zip` descargad
 
 ## Qué recibes
 
-Al descomprimir `nexisc-v<VERSIÓN>-<plataforma>.zip` obtienes el ejecutable `nexisc` (en Windows, `nexisc.exe`). Es un binario único, no necesita instalar runtime ni dependencias.
+Al descomprimir `nexisc-v<VERSIÓN>-<ARQUITECTURA>.zip` obtienes el ejecutable `nexisc` (en Windows, `nexisc.exe`). Es un binario único, no necesita instalar runtime ni dependencias.
 
-> Reemplaza `<VERSIÓN>` por la versión que descargaste (ej: `nexisc-v0.0.1-x86_64.zip`) y `<URL-DEL-ZIP>` por la dirección de descarga.
+> Reemplaza `<VERSIÓN>` por la versión que descargaste (ej: `nexisc-v0.0.1-x86_64.zip`, `nexisc-v0.0.1-aarch64.zip`) y `<URL-DEL-ZIP>` por la dirección de descarga.
 
 ---
 
@@ -51,7 +51,7 @@ Si prefieres una instalación global (para todos los usuarios del sistema): `sud
 ### 1. Descargar y descomprimir
 
 ```powershell
-Invoke-WebRequest -Uri "<URL-DEL-ZIP>/nexisc-v<VERSIÓN>-windows-x86_64.zip" -OutFile "$env:USERPROFILE\nexisc.zip"
+Invoke-WebRequest -Uri "<URL-DEL-ZIP>/nexisc-v<VERSIÓN>-x86_64.zip" -OutFile "$env:USERPROFILE\nexisc.zip"
 Expand-Archive "$env:USERPROFILE\nexisc.zip" -DestinationPath "$env:USERPROFILE\nexisc"
 ```
 
@@ -80,8 +80,8 @@ Para **desinstalar**: borra la carpeta `%USERPROFILE%\nexisc` y elimina esa entr
 ### 1. Descargar y descomprimir
 
 ```bash
-curl -O <URL-DEL-ZIP>/nexisc-v<VERSIÓN>-mac-x86_64.zip
-unzip nexisc-v<VERSIÓN>-mac-x86_64.zip -d nexisc
+curl -O <URL-DEL-ZIP>/nexisc-v<VERSIÓN>-x86_64.zip
+unzip nexisc-v<VERSIÓN>-x86_64.zip -d nexisc
 cd nexisc
 ```
 
@@ -129,5 +129,5 @@ Hola, mundo
 nexisc --help
 ```
 
-- Códigos de error `NX` explicados en [el catálogo de errores](language/errors/errors.md).
-- Documentación completa del lenguaje en [`docs/`](README.md).
+- Códigos de error `NX` explicados en [el catálogo de errores](../docs/language/errors/errors.md).
+- Documentación completa del lenguaje en [`docs/`](../docs/README.md).

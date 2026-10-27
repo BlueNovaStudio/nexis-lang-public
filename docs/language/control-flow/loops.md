@@ -1,8 +1,4 @@
-Entendido. Aquí tienes la versión revisada de **Bucles en Nexis** con una **nueva sintaxis para `for`**, diseñada para ser más clara, legible y diferente a la de C++.
-
----
-
-# 📘 Bucles en Nexis
+# Bucles en Nexis
 
 ## Introducción
 
@@ -93,7 +89,7 @@ do {
 ### Ejemplo 1: Menú interactivo
 
 ```
-int opcion
+int opcion;
 
 do {
     Console.print("--- Menú Principal ---")
@@ -117,7 +113,7 @@ do {
 ### Ejemplo 2: Validación de entrada
 
 ```
-int edad
+int edad;
 
 do {
     edad = Console.input(text="Ingrese su edad (mayor a 0): ")
@@ -143,17 +139,32 @@ for variable in rango {
 ### Características
 
 - `variable` toma cada valor del rango especificado.
-- El rango se define con el operador `..` (inclusive).
+- El rango **inclusivo** se escribe con `..` (`a .. b` recorre `a`, `a+1`, ..., `b`).
+- El rango **exclusivo** se escribe con `...` (`a ... b` recorre `a`, `a+1`, ..., `b-1`).
 - No necesita inicialización, condición ni actualización explícitas.
 - Es más legible y menos propenso a errores.
 
-### Ejemplo 1: Rango básico
+### Ejemplo 1: Rango inclusivo `..`
 
 ```
 for i in 0 .. 5 {
-    Console.print(i)
+    Console.println(i)
 }
-// Salida: 0, 1, 2, 3, 4, 5
+// Salida: 0, 1, 2, 3, 4, 5   (incluye el 5)
+```
+
+### Ejemplo 1b: Rango exclusivo `...`
+
+`a ... b` equivale a `a .. (b - 1)`. Es el operador recomendado para
+recorrer colecciones, porque `size` ya es la longitud y el último índice
+válido es `size - 1`:
+
+```
+Vector<int> numeros = [64, 34, 25, 12, 22, 11, 90]
+for i in 0 ... numeros.length() {
+    Console.println(numeros[i])
+}
+// Recorre los índices 0..6, nunca 7 (que estaría fuera de rango)
 ```
 
 ### Ejemplo 2: Con paso personalizado (usando `step`)
@@ -216,10 +227,12 @@ El bucle `foreach` se utiliza para iterar sobre **colecciones** como arreglos, l
 
 ### Sintaxis
 
+Nexis acepta las tres formas equivalentes siguientes:
+
 ```
-foreach (variable in coleccion) {
-    // código a repetir
-}
+foreach (variable in coleccion) { ... }     // forma clásica
+foreach (variable, coleccion) { ... }       // forma con coma
+foreach (tipo variable, coleccion) { ... }  // tipo explícito
 ```
 
 ### Características
@@ -228,11 +241,15 @@ foreach (variable in coleccion) {
 - No necesita índice ni control de límites.
 - Es más seguro y legible para recorrer colecciones.
 - El tipo de la variable puede ser `auto` para deducción automática.
+- La variable del bucle **toma el valor real del elemento**, por lo que se
+  puede comparar directamente con otra variable (`if (elem == buscado)`).
+- Con `foreach (tipo variable, coleccion)` el tipo puede ser primitivo
+  (`int`, `string`, `char`, ...), un `struct`/`class` o un genérico `T`.
 
 ### Ejemplo 1: Recorrer un vector
 
 ```
-#inject vector;
+#inject Vector;
 
 Vector<int> numeros = [10, 20, 30, 40, 50]
 
@@ -245,7 +262,7 @@ foreach (numero in numeros) {
 ### Ejemplo 2: Con tipo específico
 
 ```
-#inject vector;
+#inject Vector;
 
 Vector<string> nombres = ["Ana", "Luis", "Carlos", "María"]
 
@@ -258,7 +275,7 @@ foreach (string nombre in nombres) {
 ### Ejemplo 3: Con auto (deducción de tipo)
 
 ```
-#inject vector;
+#inject Vector;
 
 Vector<int> edades = [18, 25, 30, 22, 27]
 
@@ -271,7 +288,7 @@ foreach (auto edad in edades) {
 ### Ejemplo 4: Con condición dentro del bucle
 
 ```
-#inject vector;
+#inject Vector;
 
 Vector<float> precios = [10.5f, 25.0f, 15.75f, 30.0f]
 
@@ -280,6 +297,69 @@ foreach (precio in precios) {
         Console.print("Precio alto: " + precio)
     else:
         Console.print("Precio bajo: " + precio)
+}
+```
+
+### Ejemplo 5: Forma con coma y búsqueda con comparación
+
+```
+#inject Vector;
+
+Vector<string> productos = ["Arroz", "Azucar", "Aceite", "Leche", "Fideos"]
+string buscado = "Aceite"
+bool encontrado = false
+
+foreach (elem, productos) {
+    if (elem == buscado) {
+        encontrado = true
+    }
+}
+
+if (encontrado) {
+    Console.println("Encontrado")
+} else {
+    Console.println("No encontrado")
+}
+// Salida: Encontrado
+```
+
+### Ejemplo 6: Tipo explícito y structs
+
+```
+#inject Vector;
+
+struct Producto {
+    string nombre;
+    int precio;
+}
+
+Vector<Producto> inventario = []
+inventario.add(Producto("Arroz", 1500))
+inventario.add(Producto("Leche", 3200))
+
+foreach (Producto p, inventario) {
+    Console.println(p.nombre + " -> " + p.precio)
+}
+```
+
+### Ejemplo 7: Recorrer un string carácter por carácter
+
+```
+string frase = "Nexis"
+foreach (char c, frase) {
+    Console.println(c)
+}
+// Salida: N, e, x, i, s
+```
+
+### Ejemplo 8: Genéricos dentro de una plantilla
+
+```
+template <type_full T>
+void imprimir(Vector<T>: lista) {
+    foreach (T item, lista) {
+        Console.println(item)
+    }
 }
 ```
 
@@ -355,7 +435,7 @@ for i in 0 .. 5 {
 Sale de la función y del bucle.
 
 ```
-#inject vector;
+#inject Vector;
 
 func buscar_numero(Vector<int>: numeros, int: objetivo) -> bool {
     foreach (numero in numeros) {
@@ -452,3 +532,21 @@ for i in 0 .. 10 step 2 {
 7. **Inicializa variables antes del bucle:** Si necesitas el valor después, asegúrate de inicializarlas.
 
 8. **Usa `step` para pasos personalizados:** Facilita la lectura de iteraciones con incrementos diferentes.
+
+
+## Novedades v0.0.6
+
+- **Rango exclusivo `...`**: `for i in 0 ... size` recorre de `0` a `size - 1`.
+  El rango `..` sigue siendo inclusivo. Ambos aceptan `step`.
+- **`foreach` con coma**: `foreach (elem, coleccion)` es equivalente a
+  `foreach (elem in coleccion)`.
+- **`foreach` con tipo explícito**: `foreach (string elem, coleccion)`,
+  `foreach (int n, coleccion)` y `foreach (Producto p, coleccion)`.
+- **La variable del bucle recibe el valor del elemento**, así que se puede
+  comparar, sumar o pasar a una función sin conversiones.
+- **`foreach` sobre `string`** entrega un `char` por iteración.
+- **`foreach` sobre cualquier colección**: `Vector`, `LinkedList`, `Stack`,
+  `Queue`, `Set`, `Map` (claves), `Tree`, `Trie`, `Graph`.
+- **`break` y `continue`** funcionan igual en `for`, `while`, `do while` y
+  `foreach`.
+

@@ -1,268 +1,244 @@
-# 📘 Funciones sin Retorno en Nexis
+# 📘 Funciones con Retorno en Nexis
 
 ## Introducción
 
-Las funciones sin retorno (también llamadas **procedimientos**) ejecutan un bloque de código pero **no devuelven ningún valor**. Se utilizan para realizar acciones como mostrar información, modificar variables o ejecutar procesos sin necesidad de obtener un resultado.
+Las funciones con retorno permiten ejecutar un bloque de código y devolver un resultado. En Nexis, el valor retornado puede ser utilizado en otras operaciones o asignado a variables.
 
 ---
 
 ## 1. Sintaxis básica
 
 ```
-void nombre_funcion(parametros) {
+func nombre_funcion(parametros) -> tipo_retorno {
     // bloque de código
+    valor_retorno
 }
 ```
 
 ### Reglas importantes
 
-- La función se declara con la palabra clave `func` (implícita) o con `void` para indicar que no retorna valor.
+- La función se declara con la palabra clave `func`.
 - Los parámetros se escriben con el formato `nombre: tipo`.
-- No se usa `-> tipo_retorno` porque no hay valor de retorno.
-- No se usa `emit` porque no se retorna nada.
-- El bloque de código se ejecuta cuando se llama a la función.
+- El tipo de retorno se especifica después de `->`.
+- Si el bloque tiene **una sola línea**, el valor se retorna implícitamente (sin usar `emit`).
+- Si el bloque tiene **más de una línea**, se debe usar `emit ->` para retornar el valor.
 
 ---
 
-## 2. Ejemplos de funciones sin retorno
+## 2. Ejemplos de funciones con retorno
 
-### Ejemplo 1: Función básica
+### Ejemplo 1: Función simple (una línea)
 
-```
-void suma(int: a, int: b) {
-    Console.print(a + b)
-}
-```
-
-**Uso:**
-```
-suma(3, 5)   // imprime 8
-```
-
----
-
-### Ejemplo 2: Función con múltiples operaciones
-
-```
-void mostrar_info(string: nombre, int: edad) {
-    Console.print("Nombre: " + nombre)
-    Console.print("Edad: " + edad)
-    
-    if edad >= 18 {
-        Console.print("Es mayor de edad")
-    } else {
-        Console.print("Es menor de edad")
-    }
-}
-```
-
-**Uso:**
-```
-mostrar_info("Ana", 20)
-```
-
-**Salida:**
-```
-Nombre: Ana
-Edad: 20
-Es mayor de edad
-```
-
----
-
-### Ejemplo 3: Función con operaciones aritméticas
-
-```
-void calcular_y_mostrar(int: x, int: y) {
-    int suma = x + y
-    int resta = x - y
-    int multiplicacion = x * y
-    
-    Console.print("Suma: " + suma)
-    Console.print("Resta: " + resta)
-    Console.print("Multiplicación: " + multiplicacion)
-}
-```
-
-**Uso:**
-```
-calcular_y_mostrar(10, 5)
-```
-
-**Salida:**
-```
-Suma: 15
-Resta: 5
-Multiplicación: 50
-```
-
----
-
-### Ejemplo 4: Función con entrada de usuario
-
-```
-void saludar_usuario() {
-    auto nombre = Console.input(text="Ingrese su nombre: ")
-    Console.print("¡Hola, " + nombre + "! Bienvenido a Nexis")
-}
-```
-
-**Uso:**
-```
-saludar_usuario()
-```
-
-**Interacción:**
-```
-Ingrese su nombre: Carlos
-¡Hola, Carlos! Bienvenido a Nexis
-```
-
----
-
-### Ejemplo 5: Función con modificador de variables (por referencia)
-
-```
-void incrementar(int: numero) {
-    numero = numero + 1
-}
-```
-
-**Uso:**
-```
-int contador = 5
-incrementar(contador)
-Console.print(contador)   // 6
-```
-
----
-
-## 3. Comparación con funciones con retorno
-
-| Característica | Sin retorno (`void`) | Con retorno |
-|----------------|----------------------|-------------|
-| Palabra clave | `void` | `func` + `-> tipo` |
-| Retorna valor | No | Sí |
-| Usa `emit` | No | Sí (en múltiples líneas) |
-| Se puede asignar | No | Sí |
-| Uso principal | Acciones, efectos secundarios | Cálculos, obtener valores |
-
-### Ejemplo comparativo
-
-**Sin retorno:**
-```
-void mostrar_suma(int: a, int: b) {
-    Console.print(a + b)
-}
-```
-
-**Con retorno:**
 ```
 func suma(int: a, int: b) -> int {
     a + b
 }
 ```
 
-**Diferencia en el uso:**
+**Uso:**
 ```
-mostrar_suma(5, 3)           // imprime 8
-
-int resultado = suma(5, 3)   // resultado = 8
-Console.print(resultado)     // imprime 8
+int resultado = suma(5, 3)
+Console.print(resultado)   // 8
 ```
 
 ---
 
-## 4. Llamada a funciones sin retorno
-
-Las funciones sin retorno se llaman por su nombre y se pasan los argumentos entre paréntesis.
+### Ejemplo 2: Función con múltiples líneas (usando `emit`)
 
 ```
-// Función definida
-void mostrar_mensaje(string: mensaje) {
-    Console.print(mensaje)
-}
-
-// Llamada a la función
-mostrar_mensaje("Hola mundo")
-```
-
-También se pueden llamar dentro de otras funciones:
-
-```
-void proceso_completo() {
-    mostrar_mensaje("Iniciando proceso...")
-    // otras operaciones
-    mostrar_mensaje("Proceso finalizado")
-}
-```
-
----
-
-## 5. Funciones sin retorno con parámetros opcionales
-
-```
-void mostrar_datos(string: nombre, int: edad = 18) {
-    Console.print("Nombre: " + nombre)
-    Console.print("Edad: " + edad)
+func suma() -> int {
+    int a = 4
+    int b = 3
+    
+    emit -> a + b
 }
 ```
 
 **Uso:**
 ```
-mostrar_datos("Ana", 25)   // Edad: 25
-mostrar_datos("Luis")      // Edad: 18 (valor por defecto)
+int resultado = suma()
+Console.print(resultado)   // 7
+```
+
+---
+
+### Ejemplo 3: Función con operaciones adicionales
+
+```
+func calcular_precio(float: precio_base, float: impuesto) -> float {
+    float total = precio_base + (precio_base * impuesto)
+    float descuento = 5.0f
+    
+    if total > 100.0f {
+        total = total - descuento
+    }
+    
+    emit -> total
+}
+```
+
+**Uso:**
+```
+float precio_final = calcular_precio(100.0f, 0.18f)
+Console.print(precio_final)   // 113.0 (100 + 18 - 5)
+```
+
+---
+
+### Ejemplo 4: Función con retorno booleano
+
+```
+func es_mayor_de_edad(int: edad) -> bool {
+    if edad >= 18 {
+        emit -> true
+    } else {
+        emit -> false
+    }
+}
+```
+
+**Uso:**
+```
+bool mayor = es_mayor_de_edad(20)
+Console.print(mayor)   // true
+```
+
+---
+
+### Ejemplo 5: Función con retorno de string
+
+```
+func saludo(string: nombre) -> string {
+    string mensaje = "Hola, " + nombre + "!"
+    emit -> mensaje
+}
+```
+
+**Uso:**
+```
+auto saludo_personal = saludo("Ana")
+Console.print(saludo_personal)   // "Hola, Ana!"
+```
+
+---
+
+## 3. Comparación entre retorno implícito y `emit`
+
+| Característica | Retorno implícito | Con `emit ->` |
+|----------------|-------------------|---------------|
+| Número de líneas | Una sola línea | Una o más líneas |
+| Sintaxis | `valor` | `emit -> valor` |
+| Uso recomendado | Funciones simples | Funciones con lógica compleja |
+
+### Ejemplos comparativos
+
+**Retorno implícito (una línea):**
+```
+func cuadrado(int: x) -> int {
+    x * x
+}
+```
+
+**Con `emit` (múltiples líneas):**
+```
+func cuadrado(int: x) -> int {
+    int resultado = x * x
+    emit -> resultado
+}
+```
+
+---
+
+## 4. Asignación del resultado a una variable
+
+El valor retornado por una función puede ser almacenado en una variable.
+
+```
+int resultado = suma(10, 5)
+Console.print(resultado)   // 15
+```
+
+También se puede usar directamente en expresiones:
+
+```
+int total = suma(5, 3) * 2
+Console.print(total)   // 16
+```
+
+---
+
+## 5. Funciones con retorno y entrada de usuario
+
+```
+func obtener_edad() -> int {
+    int edad = Console.input(text="Ingrese su edad: ")
+    emit -> edad
+}
+
+int edad_usuario = obtener_edad()
+Console.print("Tu edad es: " + edad_usuario)
 ```
 
 ---
 
 ## 6. Errores comunes
 
-### Error 1: Intentar asignar el resultado de una función void
+### Error 1: Olvidar el tipo de retorno
 
 ```
-int resultado = mostrar_suma(5, 3)   // error: void no retorna valor
-```
-
-**Solución:** No asignar el resultado de funciones void.
-
-```
-mostrar_suma(5, 3)   // llamada directa
-```
-
----
-
-### Error 2: Usar `emit` en una función void
-
-```
-void mostrar_suma(int: a, int: b) {
-    emit -> a + b   // error: void no debe retornar
+func suma(int: a, int: b) {   // falta -> int
+    a + b
 }
 ```
 
-**Solución:** Eliminar `emit` y solo ejecutar las acciones necesarias.
+**Solución:** Especificar el tipo de retorno con `-> tipo`.
 
 ```
-void mostrar_suma(int: a, int: b) {
-    Console.print(a + b)
+func suma(int: a, int: b) -> int {
+    a + b
 }
 ```
 
 ---
 
-### Error 3: Olvidar el tipo `void`
+### Error 2: Usar `emit` en una función de una sola línea
 
 ```
-func suma(int: a, int: b) {   // falta void
-    Console.print(a + b)
+func suma(int: a, int: b) -> int {
+    emit -> a + b   // no es necesario
 }
 ```
 
-**Solución:** Especificar `void` para indicar que no retorna valor.
+**Solución:** Usar retorno implícito.
 
 ```
-void suma(int: a, int: b) {
-    Console.print(a + b)
+func suma(int: a, int: b) -> int {
+    a + b
+}
+```
+
+---
+
+### Error 3: No retornar un valor en todas las rutas
+
+```
+func es_par(int: numero) -> bool {
+    if numero % 2 == 0 {
+        emit -> true
+    }
+    // falta retorno para cuando es impar
+}
+```
+
+**Solución:** Asegurar que todas las rutas tengan un retorno.
+
+```
+func es_par(int: numero) -> bool {
+    if numero % 2 == 0 {
+        emit -> true
+    } else {
+        emit -> false
+    }
 }
 ```
 
@@ -270,18 +246,16 @@ void suma(int: a, int: b) {
 
 ## 7. Buenas prácticas
 
-1. **Usa nombres descriptivos:** El nombre debe indicar la acción que realiza.
+1. **Usa nombres descriptivos:** El nombre de la función debe indicar qué hace y qué retorna.
 
 ```
-void mostrar_resultado()
-void procesar_datos()
-void guardar_informacion()
+func calcular_promedio(float: a, float: b) -> float
 ```
 
-2. **Mantén funciones enfocadas:** Una función void debe hacer una sola tarea.
+2. **Mantén funciones pequeñas:** Una función debe hacer una sola cosa y hacerla bien.
 
-3. **Usa `void` explícitamente:** Aunque en Nexis se puede omitir, es recomendable usarlo para claridad.
+3. **Prefiere retorno implícito para funciones simples:** Si la función tiene una sola línea, no uses `emit`.
 
-4. **Documenta efectos secundarios:** Si la función modifica variables globales, indícalo en comentarios.
+4. **Usa `emit` para claridad:** En funciones complejas, `emit` hace explícito qué valor se retorna.
 
-5. **Prefiere funciones con retorno para cálculos:** Si necesitas un valor, usa funciones con retorno en lugar de modificar variables globales.
+5. **Documenta el tipo de retorno:** Especifica siempre el tipo después de `->`.

@@ -1,4 +1,4 @@
-# 💬 Comentarios en Nexis
+# Comentarios en Nexis
 
 Los comentarios permiten añadir notas explicativas al código sin que afecten su ejecución. Nexis soporta comentarios de una línea y de varias líneas.
 
@@ -49,7 +49,7 @@ Una tercera forma de comentario de bloque
 ## 3. Reglas
 
 1. Los comentarios de bloque no pueden anidarse: un `#/*` dentro de otro `#/* ... */#` no es válido y generará un error de sintaxis (NX90) o un comentario mal cerrado (NX91).
-2. Cierra siempre los comentarios de bloque; olvidar el delimitador de cierre produce [NX91](../errors/errors.md#nx91-comentario-o-cadena-mal-cerrada).
+2. Cierra siempre los comentarios de bloque; olvidar el delimitador de cierre produce [NX91](../errors/catalog-04-io-modulos-y-sistema.md#nx91-comentario-o-cadena-mal-cerrada).
 
 ## 4. Buenas prácticas
 

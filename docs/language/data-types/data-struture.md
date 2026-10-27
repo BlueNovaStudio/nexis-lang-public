@@ -1,22 +1,24 @@
-# 🗂️ Estructuras de datos en Nexis
+# Estructuras de datos en Nexis
 
 Nexis ofrece estructuras de datos genéricas declaradas con la forma `Estructura<T>`. Permiten almacenar y organizar colecciones de elementos del mismo tipo.
 
-> La referencia completa de cada estructura está en [standard-library/collections](../../standard-library/collections/README.md). Aquí tienes un resumen orientado al curso.
+> La referencia completa de cada estructura está en la
+> [API de colecciones de la referencia rápida](../../referencia-api.md#15-api-de-colecciones).
+> Aquí tienes un resumen orientado al curso.
 
 ## Estructuras disponibles
 
 | Estructura | Comportamiento | Declaración | Métodos clave |
 |------------|----------------|-------------|---------------|
-| `Vector<T>` | Arreglo dinámico | `Vector<int> nums = []` | `agregar`, `obtener`, `eliminar`, `ordenar` |
-| `Stack<T>` | LIFO (pila) | `Stack<int> pila = Stack()` | `apilar`, `desapilar`, `cima` |
-| `Queue<T>` | FIFO (cola) | `Queue<int> cola = Queue()` | `encolar`, `desencolar`, `frente` |
-| `Set<T>` | Valores únicos | `Set<int> ids = {}` | `agregar`, `contiene`, `eliminar` |
-| `Map<K,V>` | Claves → valores | `Map<string,int> inv = {}` | `poner`, `obtener`, `contiene` |
-| `LinkedList<T>` | Nodos enlazados | `LinkedList<int> lista = LinkedList()` | `agregar_frente`, `agregar_fondo` |
-| `Tree<T>` | Árbol binario de búsqueda | `Tree<int> arbol = Tree()` | `insertar`, `buscar`, `en_orden` |
-| `Graph<T>` | Vértices y aristas | `Graph<string> grafo = Graph()` | `agregar_nodo`, `conectar`, `adyacentes` |
-| `Trie` | Árbol de prefijos | `Trie dict = Trie()` | `insertar`, `comienza_con` |
+| `Vector<T>` | Arreglo dinámico | `Vector<int> nums = []` | `add`, `get`, `remove`, `sort` |
+| `Stack<T>` | LIFO (pila) | `Stack<int> pila = Stack()` | `push`, `pop`, `peek` |
+| `Queue<T>` | FIFO (cola) | `Queue<int> cola = Queue()` | `enqueue`, `dequeue`, `front` |
+| `Set<T>` | Valores únicos | `Set<int> ids = {}` | `add`, `contains`, `remove` |
+| `Map<K,V>` | Claves → valores | `Map<string,int> inv = {}` | `put`, `get`, `contains` |
+| `LinkedList<T>` | Nodos enlazados | `LinkedList<int> lista = LinkedList()` | `addFirst`, `addLast` |
+| `Tree<T>` | Árbol binario de búsqueda | `Tree<int> arbol = Tree()` | `insert`, `search`, `inOrder` |
+| `Graph<T>` | Vértices y aristas | `Graph<string> grafo = Graph()` | `addNode`, `connect`, `neighbors` |
+| `Trie` | Árbol de prefijos | `Trie dict = Trie()` | `insert`, `startsWith` |
 
 ## Literales
 
@@ -25,28 +27,32 @@ Nexis ofrece estructuras de datos genéricas declaradas con la forma `Estructura
 - `{}` sin dos puntos (`{10, 20}`) inicializa un `Set`.
 
 ```nexis
-#inject vector;
-#inject map;
-#inject set;
+#inject Vector;
+#inject Map;
+#inject Set;
 
 Vector<int> numeros = [1, 2, 3]
 Map<string, int> inventario = {"manzanas": 3}
 Set<int> activos = {1, 2, 3}
 ```
 
-## Inferencia con `:=`
+## Declaración con tipo explícito
 
-Cuando la inicialización permite deducir el tipo, se puede usar `:=`:
+En V0.0.6 **el tipo es obligatorio** al declarar una colección: no existe
+inferencia con `:=`. Escribe siempre `Tipo nombre = ...`:
 
 ```nexis
-numeros := [1, 2, 3]
-capitales := {"Peru": "Lima"}
-ids := {10, 15, 20}
+Vector<int> numeros = [1, 2, 3]
+Map<string, string> capitales = {"Peru": "Lima"}
+Set<int> ids = {10, 15, 20}
 ```
+
+Si se intenta `numeros := [1, 2, 3]`, el compilador responde con `NX02`
+(variable no definida), porque no reconoce la declaración.
 
 ## Reglas importantes
 
-1. Cada estructura requiere su importación: `#inject vector;`, `#inject stack;`, etc.
+1. Cada estructura requiere su importación: `#inject Vector;`, `#inject Stack;`, etc.
 2. Todas son **tipadas**: `Vector<string>` no puede guardar enteros (NX07).
 3. Los índices empiezan en **0**.
 4. Operar sobre una estructura vacía produce NX50.
@@ -63,8 +69,9 @@ foreach (numero in numeros) {
 
 ## Errores relacionados
 
-- [NX11](../errors/errors.md#nx11-índice-fuera-de-rango): índice fuera de rango.
-- [NX50](../errors/errors.md#nx50-operación-sobre-colección-vacía): operar sobre una colección vacía.
-- [NX51](../errors/errors.md#nx51-modificar-colección-durante-iteración): modificar mientras se itera.
+- [NX11](../errors/catalog-01-variables-y-tipos.md#nx11-índice-fuera-de-rango): índice fuera de rango.
+- [NX50](../errors/catalog-03-errores-y-colecciones.md#nx50-operación-sobre-colección-vacía): operar sobre una colección vacía.
+- [NX51](../errors/catalog-03-errores-y-colecciones.md#nx51-modificar-colección-durante-iteración): modificar mientras se itera.
 
-> La documentación completa de cada estructura está en [standard-library/collections](../../standard-library/collections/README.md).
+> La documentación completa de cada estructura está en la
+> [API de colecciones de la referencia rápida](../../referencia-api.md#15-api-de-colecciones).

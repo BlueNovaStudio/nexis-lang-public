@@ -1,6 +1,8 @@
 # Librería Network en Nexis
 
-La librería `network` ofrece comunicación mediante HTTP y sockets. Las operaciones de red son potencialmente lentas y deben permitir errores y tiempos de espera.
+La librería `network` está **reservada** para comunicación HTTP y
+sockets. En V0.0.6 **no hay funciones implementadas**: cualquier llamada
+devuelve `void`.
 
 ## 1. Importación
 
@@ -8,27 +10,37 @@ La librería `network` ofrece comunicación mediante HTTP y sockets. Las operaci
 #inject network;
 ```
 
-## 2. Funciones
+## 2. Estado en V0.0.6
 
-| Función | Descripción |
-|---------|-------------|
-| `get(url)` | Realiza una petición HTTP GET |
-| `post(url, datos)` | Envía datos mediante HTTP POST |
-| `abrir_socket(host, puerto)` | Abre una conexión TCP |
-| `enviar(socket, datos)` | Envía bytes o texto |
-| `recibir(socket, cantidad)` | Recibe datos |
-| `cerrar(socket)` | Cierra la conexión |
+| Función planificada | Estado |
+|---------------------|--------|
+| `get(url)` | No implementada |
+| `post(url, datos)` | No implementada |
+| `openSocket(host, puerto)` | No implementada |
+| `send(socket, datos)` | No implementada |
+| `receive(socket, cantidad)` | No implementada |
+| `close(socket)` | No implementada |
 
-## 3. Ejemplo
+## 3. Qué hacer mientras tanto
 
-```
-#inject network;
+- Usa `file` para intercambiar datos localmente.
+- Para pruebas, genera los datos con `random` o léelos de un archivo.
+- No incluyas credenciales en el código fuente.
 
-auto respuesta = network.get("https://nexis.dev/api/version")
-Console.print(respuesta.estado)
-Console.print(respuesta.cuerpo)
-```
+## 4. Diseño previsto
 
-## 4. Seguridad
+Cuando se implemente, la API deberá:
 
-La librería debe validar URLs, limitar tamaños de respuesta y permitir configurar un tiempo de espera. Para datos sensibles se debe usar HTTPS y evitar incluir credenciales en el código fuente.
+- validar URLs y limitar el tamaño de las respuestas;
+- permitir configurar tiempos de espera;
+- usar HTTPS para datos sensibles;
+- devolver errores claros (`ErrorRed`) en lugar de fallar en silencio.
+
+## 5. Errores comunes
+
+| Error | Solución |
+|-------|----------|
+| Esperar una respuesta de `network.get` | No está implementada en V0.0.6. |
+| Asignar el resultado a una variable | Devuelve `void`. |
+
+Este documento se actualizará cuando la librería esté disponible.

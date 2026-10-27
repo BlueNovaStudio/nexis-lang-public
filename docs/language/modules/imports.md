@@ -20,6 +20,8 @@ Para importar una librería en Nexis, se utiliza la directiva `#inject` seguida 
 - **Lleva punto y coma (`;`)** al final.
 - No necesita comillas ni corchetes.
 - Se puede importar una o varias librerías en líneas separadas.
+- Para colecciones nativas se recomienda usar el nombre del tipo: `#inject Vector;`, `#inject Stack;`, `#inject Map;`. Los nombres en minúscula también se aceptan por compatibilidad.
+- Inyecta cada colección antes de declarar su tipo o usar sus métodos.
 
 ---
 
@@ -28,14 +30,14 @@ Para importar una librería en Nexis, se utiliza la directiva `#inject` seguida 
 ### Ejemplo 1: Importar una sola librería
 
 ```
-#inject vector;
+#inject Vector;
 ```
 
 ### Ejemplo 2: Importar múltiples librerías
 
 ```
-#inject vector;
-#inject stack;
+#inject Vector;
+#inject Stack;
 #inject math;
 ```
 
@@ -81,7 +83,7 @@ También es posible importar archivos creados por el usuario.
 
 ```
 #inject math;
-#inject vector;
+#inject Vector;
 #inject string;
 #inject file;
 #inject time;

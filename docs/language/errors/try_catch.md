@@ -32,11 +32,11 @@ try {
 ## 2. Ejemplo básico
 
 ```
-#inject vector;
+#inject Vector;
 
 try {
     Vector<int> datos = [10, 20]
-    Console.print(datos.obtener(5))   // Error: índice fuera de rango
+    Console.print(datos.get(5))   // Error: índice fuera de rango
 } catch (ErrorIndice e) {
     Console.print("Te saliste del límite: " + e.mensaje())
 } catch (Error e) {
@@ -147,7 +147,7 @@ Retorna un vector con el stack trace (cadena de llamadas).
 
 ```
 catch (Error e) {
-    vector traza = e.traza_pila()
+    Vector<string> traza = e.traza_pila()
     Console.print("Stack trace:")
     foreach (item in traza) {
         Console.print("  " + item)
@@ -173,7 +173,7 @@ catch (Error e) {
 ```
 try {
     Vector<int> datos = [10, 20]
-    datos.obtener(5)   // Error: índice fuera de rango
+    datos.get(5)   // Error: índice fuera de rango
 } catch (ErrorIndice e) {
     Console.print("--- DETALLES DEL ERROR ---")
     Console.print("Mensaje: " + e.mensaje())
@@ -224,7 +224,7 @@ Lanza un error si la condición es falsa.
 ```
 try {
     Vector<int> datos = [10, 20]
-    afirmar(datos.longitud() > 0, "El vector está vacío")
+    afirmar(datos.length() > 0, "El vector está vacío")
     Console.print("Vector válido")
 } catch (ErrorAssert e) {
     Console.print("Assert falló: " + e.mensaje())
